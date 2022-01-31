@@ -1,5 +1,5 @@
 /*
- * @jsx jsx
+ * @jsx purejsx
  */
 /// <reference lib="DOM" />
 
@@ -25,9 +25,19 @@ declare namespace JSX {
     }
 }
 
-function jsx<T extends JSX.Tag = JSX.Tag>(tag: T, attributes: { [key: string]: any } | null, ...children: Node[]): JSX.Element
-function jsx(tag: JSX.Component, attributes: Parameters<typeof tag> | null, ...children: Node[]): Node
-function jsx(tag: JSX.Tag | JSX.Component, attributes: { [key: string]: any } | null, ...children: Node[]) {
+// This function name is the jsxFactory arg.
+function purejsx<T extends JSX.Tag = JSX.Tag>(
+    tag: T,
+    attributes: { [key: string]: any } | null,
+    ...children: Node[]): JSX.Element
+function purejsx(
+    tag: JSX.Component,
+    attributes: Parameters<typeof tag> | null,
+    ...children: Node[]): Node
+function purejsx(
+    tag: JSX.Tag | JSX.Component,
+    attributes: { [key: string]: any } | null,
+    ...children: Node[]) {
     if (typeof tag === 'function') {
         return tag(attributes ?? {}, children);
     }

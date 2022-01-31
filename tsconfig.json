@@ -3,7 +3,7 @@
     "outDir": "out",
     "module": "es6",
     "jsx": "react",
-    "jsxFactory": "jsx"
+    "jsxFactory": "purejsx"
   },
   "files": [
     "jsx.tsx",
