@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "out",
+    "module": "es6",
+    "jsx": "react",
+    "jsxFactory": "jsx"
+  },
+  "files": [
+    "jsx.tsx",
+  ]
+}
