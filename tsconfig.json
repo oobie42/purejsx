@@ -6,6 +6,7 @@
     "jsxFactory": "purejsx"
   },
   "files": [
-    "jsx.tsx",
+    "purejsx.ts",
+    "hello.tsx"
   ]
 }
